@@ -47,7 +47,7 @@ const readFileAsync = util.promisify(fs.readFile);
 async function readAndParseCSV() {
     try {
         const csvReading = await readFileAsync('data.csv', 'utf8');
-        console.log('Data before parsing: \n'+csvReading+' \n \n Data before parsing:');
+        console.log('Data before parsing: \n'+csvReading+' \n \n Data afterr parsing:');
 
         const data = parseCSV(csvReading);
         console.log(data);
