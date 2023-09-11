@@ -1,43 +1,4 @@
 console.log("Hello Hello!");
-/*
-function changeVideo(videoSrc) {
-    const videoElement = document.getElementById('videoPlayer');
-    const videoSource = document.getElementById('videoSource');
-
-    videoSource.src = videoSrc;
-    videoElement.load();
-    videoElement.play();
-}
-*/
-
-console.log('dfdf')
-
-
-// import { createReadStream } from 'fs';
-// import { array } from 'get-stream';
-// import parse from 'csv-parse';
-
-// console.log("This is round: 1");
-
-// readCSVData = async (filePath) => {
-//   const parseStream = parse({delimiter: ','});
-//   const data = await getStream.array(fs.createReadStream(filePath).pipe(parseStream));
-//   finalData = data.map(line => line.join(',')).join('\n');
-//   console.log(finalData);
-//   return finalData;
-// }
-
-
-//const fs = require('fs');
-// import fs from 'fs';
-// const getStream = require('get-stream');
-// const parse = require('csv-parse');
-
-// readCSVData = async (filePath) => {
-//   const parseStream = parse({delimiter: ','});
-//   const data = await getStream.array(fs.createReadStream(filePath).pipe(parseStream));
-//   return data.map(line => line.join(',')).join('\n');
-// }
 
 const fs = require('fs');
 const util = require('util');
