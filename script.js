@@ -5,17 +5,25 @@ const util = require('util');
 
 const readFileAsync = util.promisify(fs.readFile);
 
+let csvReading = '';
+
 async function readAndParseCSV() {
     try {
-        const csvReading = await readFileAsync('data.csv', 'utf8');
+        csvReading = await readFileAsync('data.csv', 'utf8');
         console.log('Data before parsing: \n'+csvReading+' \n \n Data afterr parsing:');
-
+    } catch (err) {
+        console.error('Error reading CSV file:', err);
+    }
+    try {
         const data = parseCSV(csvReading);
         console.log(data);
     } catch (err) {
-        console.error('Error reading or parsing CSV file:', err);
+        console.error('Error parsing CSV file:', err);
     }
 }
+
+
+
 function parseCSV(csvText) {
     const rows = csvText.split('\r\n');
     const header = rows[0].split(',');
