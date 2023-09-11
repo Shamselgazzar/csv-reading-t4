@@ -1,4 +1,4 @@
-console.log("Hello Hello!");
+console.log("Hello Hello! \n");
 
 const fs = require('fs');
 const util = require('util');
